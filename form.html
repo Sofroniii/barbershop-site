@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Barbershop-Forma</title>
+	</head>
+	<body>
+		<header class="page-header">
+		<h1 class="visually-hidden">Барбершоп "Бородинский" - истинно мужская классика</h1>
+		<div class="page-header__logo">
+			<img src="img/logo.svg" width="370" height="153" alt="Барбершоп "Бородинский" ">
+		</div>
+		<nav class="main-nav main-nav--closed main-nav--nojs">
+			<button class="main-nav__toggle" type="button">Открыть меню</button>
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list">
+					<li class="main-nav__item main-nav__item--active"><a>Записаться</a></li>
+					<li class="main-nav__item"><a href="index.html">Главная</a></li>
+					<li class="main-nav__item"><a href="photo.html">Наши работы</a></li>
+					<li class="main-nav__item"><a href="#">Контакты</a></li>
+					<li class="main-nav__item"><a href="#">Компания</a></li>
+				</ul>
+				<ul class="main-nav__user-list">
+					<li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section class="booking">
+		<div class="booking__wrapper">
+			<h2 class="booking__title">Запись на стрижку</h2>
+			<a class="btn booking__for-index visually-hidden" href="index.html">На главную</a>
+			<form class="booking-form" action="">
+				<input class="booking__input" type="text" name="surname" placeholder="Фамилия">
+				<input class="booking__input" type="text" name="name" placeholder="Имя">
+				<input class="booking__input" type="text" name="middle-name" placeholder="Отчество">
+
+				<input class="booking__input" type="text" name="tel" placeholder="Контактный телефон">
+				<input class="booking__input" type="text" name="email" placeholder="Контактный e-mail">
+
+				<textarea class="booking__textarea" name="text" placeholder="Доп. информация для мастера"></textarea>
+
+				<fieldset>
+					<legend>Выберите модель бороды:</legend>
+					<p>
+						<label class="booking__radio">
+							<input type="radio" name="type-of-beard">
+							<span class="booking__radio-indicator"></span>
+							адмирал
+							<img src="img/.svg" alt="Тип бороды Адмирал">
+						</label>
+						<label class="booking__radio">
+							<input type="radio" name="type-of-beard">
+							<span class="booking__radio-indicator"></span>
+							лесоруб
+							<img src="img/.svg" alt="Тип бороды Лесоруб">
+						</label>
+						<label class="booking__radio">
+							<input type="radio" name="type-of-beard">
+							<span class="booking__radio-indicator"></span>
+							полярник
+							<img src="img/.svg" alt="Тип бороды Полярник">
+						</label>
+						<label class="booking__radio">
+							<input type="radio" name="type-of-beard">
+							<span class="booking__radio-indicator"></span>
+							боярин
+							<img src="img/.svg" alt="Тип бороды Боярин">
+						</label>
+						<label class="booking__radio">
+							<input type="radio" name="type-of-beard">
+							<span class="booking__radio-indicator"></span>
+							мудрец
+							<img src="img/.svg" alt="Тип бороды Мудрец">
+						</label>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Дополнительные услуги:</legend>
+					<p>
+						<label class="booking__checkbox">
+							<input type="checkbox" name="painting-beards">
+							<span class="booking__checkbox-indicator"></span>
+							Покрасить бороду
+						</label>
+						<label class="booking__checkbox">
+							<input type="checkbox" name="cheat-mustache">
+							<span class="booking__checkbox-indicator"></span>
+							Накрутить усы
+						</label>
+						<label class="booking__checkbox">
+							<input type="checkbox" name="comb-the-beard">
+							<span class="booking__checkbox-indicator"></span>
+							Причесать бороду
+						</label>
+
+						<label class="booking__checkbox">
+							<input type="checkbox" name="trim-whiskey">
+							<span class="booking__checkbox-indicator"></span>
+							Подравнять виски
+						</label>
+						<label class="booking__checkbox">
+							<input type="checkbox" name="remove-the-gray">
+							<span class="booking__checkbox-indicator"></span>
+							Убрать седину
+						</label>
+						<label class="booking__checkbox">
+							<input type="checkbox" name="polished-bald-head">
+							<span class="booking__checkbox-indicator"></span>
+							Отполировать лысину
+						</label>
+					</p>
+				</fieldset>
+				<button class="btn" type="submit">Отправить заявку</button>
+			</form>
+		</div>
+	</section>
+
+	<footer class="page-footer">
+		<div class="page-footer__wrapper">
+			<p class="page-footer__contacts">
+				<b>Барбершоп "Бородинский"</b><br>
+				г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+				<a href="tel:+78885552211"><span class="page-footer__contacts-hidden">Тел.:</span> +7 (888) 555-22-11</a>
+			</p>
+			<p class="page-footer__social">
+				<span class="social-links">
+					<a class="social-link social-links--vk" href="#">Мы в Вконтакте</a>
+					<a class="social-link social-links--fb" href="#">Мы в Фейсбуке</a>
+					<a class="social-link social-links--in" href="#">Мы в Инстаграме</a>
+				</span>
+			</p>
+			<p class="page-footer__copyright">
+				Разработано:
+				<a clss="btn page-footer__copyright-link" href="#">Компания</a>
+			</p>
+		</div>
+	</footer>
+
+	</body>
+</html>

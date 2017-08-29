@@ -1,0 +1,302 @@
+.stats {
+	// @include container();
+	@include container-fluid();
+
+	background-color: #353535;
+}
+  
+.stats__header {
+	min-height: 130px;
+
+	padding-top: 27px;
+	padding-right: 38px;
+	padding-bottom: 26px;
+	padding-left: 38px;
+
+	color: #000;
+
+	background-color: #fff;
+}
+
+.stats__slogan {
+	display: block;
+	margin-bottom: 16px;
+
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.stats__intro {
+	margin: 0;
+
+	font-size: 20px;
+	line-height: 27px;
+	text-align: center;
+}
+
+.stats__legend {
+	display: block;
+
+	font-size: 20px;
+	line-height: 27px;
+
+	&--bottom {
+		padding-top: 20px;
+		padding-bottom: 14px;
+
+		text-align: center;
+		color: rgba(255, 255, 255, 0.3);
+
+		background-color: #242424;
+	}
+
+	&--top {
+		display: none;
+	}
+}
+
+.stats__legend sup {
+	top: -0.25em;
+
+	font-size: 90%;
+}
+
+.stats__list {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.stats__list tr {
+	color: #fff;
+
+	background-color: #404040;
+
+	&:nth-child(2n) {
+		background-color: #4e4e4e;
+	}
+
+	&:nth-child(3n) {
+		background-color: #353535;
+	}
+
+	&:nth-child(4n) {
+		background-color: #404040;
+	}
+}
+
+.stats__value,
+.stats__field {
+	width: 50%;
+	padding: 20px;
+	padding-bottom: 19px;
+
+	vertical-align: top;
+}
+
+.stats__value {
+	padding-right: 0;
+
+	font-size: 40px;
+	line-height: 40px;
+}
+
+.stats__value sup {
+	top: -0.35em;
+
+	margin-left: 5px;
+}
+
+.stats__field {
+	padding-left: 0;
+
+	font-size: 18px;
+	line-height: 18px;
+	text-align: right;
+}
+
+@media ($tablet-widths) {
+	.stats {
+		position: relative;
+		z-index: 1;
+
+		margin-top: -185px;
+
+		background-color: #353535;
+	}
+
+	.stats__header {
+		// @include clearfix();
+
+		position: relative;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		padding: 31px 40px;
+		padding-bottom: 24px;
+
+		// min-height: 129px;
+		// padding: 0;
+		// padding-top: 31px;
+		// padding-bottom: 24px;
+
+		&::before {
+			content: "";
+			position: absolute; 
+			top: 27px;
+			left: -15px;
+
+			border: 15px solid transparent;
+			border-bottom-color: #fff;
+			transform: rotate(45deg);
+		}
+	}
+
+	.stats__slogan {
+		width: 50%;
+		// float: left;
+		// width: 280px;
+		// padding-left: 40px;
+		margin-bottom: 20px;
+
+		font-size: 40px;
+		line-height: 40px;
+		text-align: left;
+		text-transform: none;
+	}
+
+	.stats__intro {
+		// float: right;
+		// width: 210px;
+		width: 37.5%;
+		padding: 0;
+		padding-top: 4px;
+		padding-left: 30px;
+		// padding-right: 80px;
+
+		text-align: left;
+	}
+
+	.stats__legend--top {
+		display: block;
+		width: 50%;
+		// float: left;
+		// clear: left;
+		// width: 280px;
+		// padding-left: 40px;
+
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	.stats__legend--bottom {
+		display: none;
+	}
+
+	.stats__list {
+		// @include clearfix();
+
+		display: block;
+	}
+
+	.stats__list tbody {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.stats__list tr {
+		display: block;
+
+		// float: left; 
+		// width: 250px;
+
+		width: 50%;
+		box-sizing: border-box;   
+
+		padding: 25px 35px;
+		padding-bottom: 28px; 
+	}
+
+	.stats__value,
+	.stats__field {
+		display: block;
+		width: auto;
+		padding: 0;
+	}
+
+	.stats__value {
+		margin-bottom: 7px;
+
+		font-size: 72px;
+		line-height: 72px;
+		font-weight: 700;
+	}
+
+	.stats__field {
+		font-size: 20px;
+		line-height: 27px;
+		font-weight: 400;
+		text-align: left;
+	}
+
+	.stats__field br {
+		display: none;
+	}
+
+}
+
+@media ($desktop-widths) {
+	.stats {
+		// @include clearfix();
+
+		display: flex;
+
+		margin-top: -159px;
+	}
+
+	.stats__header {
+		// float: left;
+		flex-grow: 1; 
+		flex-direction: column;
+		width: 240px;
+		// min-height: 263px;
+		padding-left: 40px;
+		padding-right: 40px;
+
+		&::before {
+			top: 22px;
+		}
+	}
+
+	.stats__slogan {
+		// float: none;
+		width: auto;
+		margin-bottom: 42px;
+		// padding-left: 0;
+	}
+
+	.stats__intro {
+		// float: none;
+		width: auto;
+		margin-bottom: 32px;
+		padding: 0;
+	}
+
+	.stats__legend--top {
+		// float: none;
+		width: auto;
+		// padding-left: 0;
+		margin-top: auto;
+	}
+
+	.stats__list {
+		// float: right;
+		// display: block; 
+		display: flex;
+		flex-grow: 1;
+		width: 640px;
+	}
+}

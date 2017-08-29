@@ -1,0 +1,11 @@
+.booking-form {
+	padding: 0 20px; // временно
+	margin: 0;
+}
+
+@media ($tablet-widths) {
+	.booking-form {
+		clear: both;
+		padding: 0; // временно
+	}
+}

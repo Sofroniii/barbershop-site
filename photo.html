@@ -2,35 +2,45 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Barbershop-Our-Work</title>
+	<title>Барбершоп "Бородинский"</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/normalize.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
 	<header class="page-header">
-		<h1 class="visually-hidden">Барбершоп "Бородинский" - истинно мужская классика</h1>
-		<div class="page-header__logo">
-			<img src="img/logo.svg" width="370" height="153" alt="Барбершоп "Бородинский" ">
-		</div>
-		<nav class="main-nav main-nav--closed main-nav--nojs">
-			<button class="main-nav__toggle" type="button">Открыть меню</button>
-			<div class="main-nav__wrapper">
-				<ul class="main-nav__list">
-					<li class="main-nav__item main-nav__item--active"><a>Работы</a></li>
-					<li class="main-nav__item"><a href="index.html">Главная</a></li>
-					<li class="main-nav__item"><a href="form.html">Записаться</a></li>
-					<li class="main-nav__item"><a href="#">Контакты</a></li>
-					<li class="main-nav__item"><a href="#">Компания</a></li>
-				</ul>
-				<ul class="main-nav__user-list">
-					<li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+			<h1 class="visually-hidden">Барбершоп "Бородинский" - истинно мужская классика</h1>
+			<div class="page-header__logo">
+				<picture>
+					<source media="(min-width: 1200px)"
+									srcset="img/logotype-desktop.svg">
+					<source media="(min-width: 768px)"
+									srcset="img/logotype-tablet.svg">
+					<img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
+				</picture>
+			</div>  
+			<nav class="main-nav main-nav--closed main-nav--nojs">
+				<button class="main-nav__toggle" type="button">Открыть меню</button>
+				<div class="main-nav__wrapper">
+					<ul class="main-nav__list">
+						<li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+						<li class="main-nav__item"><a href="photo.html">Наши работы</a></li>
+						<li class="main-nav__item"><a href="form.html">Записаться</a></li>
+						<li class="main-nav__item"><a href="#">Контакты</a></li>
+						<li class="main-nav__item"><a href="#">Компания</a></li>
+					</ul>
+					<ul class="main-nav__user-list">
+						<li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
 
-	<section clas="work">
+	<section class="work">
 		 <div class="work__wrapper">
 		 	<h2 class="work__title">Наши работы</h2>
-		 	<a class="btn booking__for-index visually-hidden" href="index.html">На главную</a>
+		 	<a class="btn work__for-index visually-hidden" href="index.html">На главную</a>
 		 	<div class="work__list">
 		 		<div class="work-item block-work-top">
 		 			<img src="img/first-photo.svg" width="280" height="480" alt="Лжепетр Мчиславский">
@@ -124,6 +134,23 @@
 			</p>
 		</div>
 	</footer>
+
+	<script>
+		var navMain = document.querySelector('.main-nav');
+		var navToggle = document.querySelector('.main-nav__toggle');
+
+		navMain.classList.remove('main-nav--nojs');
+
+		navToggle.addEventListener('click', function () {
+			if (navMain.classList.contains('main-nav--closed')) {
+				navMain.classList.remove('main-nav--closed');
+				navMain.classList.add('main-nav--opened');
+			} else {
+				navMain.classList.add('main-nav--closed');
+				navMain.classList.remove('main-nav--opened');
+			}
+		});
+	</script>
 
 </body>
 </html>

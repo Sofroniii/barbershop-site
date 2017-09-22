@@ -1,0 +1,88 @@
+.social-link {
+	position: relative;
+	display: block;
+	width: 33.33333%;
+	height: 100px;
+	margin: 0;
+
+	font-size: 0;
+	border: 1px solid #3E3E3E;
+	border-right: none;
+	background-color: inherit;
+	outline: none; // Глянуть как в bootstrap
+	cursor: pointer;
+
+	&:last-child {
+		border-right: 1px solid #3E3E3E;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		background-image: url("../img/sprite.png");
+		background-repeat: no-repeat;
+		z-index: 5;
+	}
+}
+
+.social-link--vk::after {
+	top: 35px;
+	left: 50%;
+	width: 23px;
+	height: 27px;
+	margin-left: -12px;
+	background-position: -10px -311px;
+}
+
+.social-link--fb::after {
+	top: 28px;
+	left: 50%;
+	width: 18px;
+	height: 38px;
+	margin-left: -9px;
+	background-position: -10px -10px;
+}
+
+.social-link--in::after {
+	top: 31px;
+	left: 50%;
+	width: 36px;
+	height: 36px;
+	margin-left: -18px;
+	background-position: -10px -109px;
+}
+
+@media ($desktop-widths) {
+	.social-link {
+		margin-top: 10px;
+		margin-right: 6px;
+		width: 50px;
+		height: 50px;
+		border-right: 1px solid #3E3E3E;
+
+		&::after {
+			top: 15px;
+		}
+	}
+
+	.social-link--vk::after {
+		width: 15px;
+		height: 18px;
+		margin-left: -7.5px;
+		background-position: -10px -357px;
+	}
+
+	.social-link--fb::after {
+		width: 10px;
+		height: 21px;
+		margin-left: -5px;
+		background-position: -10px -68px;
+	}
+
+	.social-link--in::after {
+		width: 19px;
+		height: 19px;
+		margin-left: -9.5px;
+		background-position: -10px -165px;
+	}
+}

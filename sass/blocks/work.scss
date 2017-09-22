@@ -4,10 +4,10 @@
 }
 
 .work__wrapper {
-	@include container();
+	@include container-fluid();
 
-	padding-top: 25px;
-	padding-bottom: 35px;
+	padding-top: 30px;
+	padding-bottom: 15px;
 }
 
 .work__title {
@@ -15,8 +15,12 @@
 	margin: 0;
 	margin-bottom: 30px;
 
+	font-family: "PTSansNarrowBold", Arial, sans-serif;
 	text-align: center;
 	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 30px;
 }
 
 .work__list {
@@ -26,82 +30,250 @@
 
 .work-item {
 	display: block;
-	min-height: 370px; // временно
 	padding: 0;
 	margin: 0;
 	margin: 0 20px;
 	margin-bottom: 20px	;
+
+	border: 1px solid #E5DDD5;
+}
+
+.work-item img {
+	display: block;
+	margin: 0 auto;
+}
+
+.work__portfolio-wrapper {
+	padding: 0 20px;
+}
+
+.work-item__title {
+	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 22px;
+
+	font-family: "PTSansNarrowBold", Arial, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 27px;
+}
+
+.work-item__description {
+	margin: 0;
+	margin-bottom: 20px; // временно
+}
+
+.service-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.service-item {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 45px;
+	margin: 0;
+	margin-right: 18px;
+	margin-bottom: 18px;
+
+	font-size: 16px;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+}
+
+.service-item--cut {
+	padding-left: 36px;
+
+	&::before {
+		width: 22px;
+		height: 20px;
+		top: 3px;
+		left: 0;
+		background-image: url("../img/scissors-icon.svg");
+	}
+}
+
+.service-item--shave {
+	&::before {
+		width: 23px;
+		height: 21px;
+		top: 3px;
+		left: 0;
+		background-image: url("../img/beard-icon.svg");
+	}
+}
+
+.service-item--mustache {
+	&::before {
+		width: 45px;
+		height: 12px;
+		top: 7px;
+		left: -10px;
+		background-image: url("../img/mustache-icon.svg");
+	}
+}
+
+.service-item--beard {
+	&::before {
+		width: 24px;
+		height: 21px;
+		top: 2px;
+		left: 2px;
+		background-image: url("../img/beard-icon.svg");
+	}
 }
 
 .block-work-top {
-	min-height: 750px; // временно
+	position: relative;
+
+	&::before {
+		content: "Работа месяца";
+		position: absolute;
+		margin: 0;
+		padding: 11px 25px; // 3vw 6vw
+		top: 0;
+		left: 0;
+		z-index: 5;
+
+		font-family: "PTSansNarrowBold", Arial, sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 20px; // 6vw
+		font-weight: 700;
+		line-height: 27px;
+
+		color: #fff;
+		background-color: #826550;
+	}
+}
+
+.block-work-top--position {
+	&::before {
+		top: 400px;
+		left: 0;
+	}
 }
 
 @media ($tablet-widths) {
 	.work__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		padding-top: 55px;
-		padding-bottom: 65px;
+		padding-bottom: 60px;
 	}
 
 	.work__title {
-		float: left;
-		// margin-right: 160px;
-		margin-bottom: 45px;
+		max-width: 50%;
+		margin-bottom: 50px;
+
+		font-size: 40px;
+		line-height: 48px;
 	}
 
 	.work__for-index {
-		position: static; // временно
-		width: auto; // временно
-		height: auto; // временно
-
-		display: block;
-		float: right;
-	}
-
-	.work__list {
-		clear: both;
+		align-self: flex-start;
+		position: static; 
+		width: auto; 
+		height: auto;
+		
+		padding-left: 35px;
+		padding-right: 35px;
 	}
 
 	.work-item {
-		display: block;
-		min-height: 295px; // временно
+		display: flex;
 		margin: 0;
-		margin-bottom: 35px	;
+		margin-bottom: 40px	;
 	}
 
-	.block-work-top {
-		min-height: 480px; // временно
+	.work-item img {
+		margin: 0;
+	}
+
+	.work__portfolio-wrapper {
+		display: flex;
+		flex-direction: column;
+		padding-top: 40px;
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-bottom: 15px;
+	}
+
+	.work-item__title {
+		margin-top: 0;
+	}
+
+	.service-list {
+		margin-top: auto;
+	}
+}
+
+.block-work-top--position {
+	&::before {
+		top: 35px;
+		left: -3px;
 	}
 }
 
 @media ($desktop-widths) {
 	.work__wrapper {
 		padding-top: 55px;
-		padding-bottom: 65px;
+		padding-bottom: 50px;
 	}
 
 	.work__title {
 		margin-bottom: 85px;
 	}
 
+	.work__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	.work-item {
-		// float: left;
-		display: inline-block;
-		vertical-align: top;
-		width: 280px;
-		margin: 0;
-		margin-right: 35px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		min-height: 540px;
-		// overflow: hidden;
+		flex-direction: column;
 		box-sizing: border-box;
+		width: 293px;
+		margin-right: 40px;
+
+		&:nth-child(3n + 1) {
+			margin-right: 0;
+		}
+	}
+
+	.work__portfolio-wrapper {
+		padding-top: 30px;
+		padding-bottom: 12px;
+		padding-left: 33px;
+		padding-right: 33px;
 	}
 
 	.block-work-top {
+		flex-direction: row;
 		width: 100%;
-		min-height: 480px; // временно
-		margin: 0;
-		margin-bottom: 20px;
+		margin-right: 0;
+	}
+
+	.block-work-top .work__portfolio-wrapper {
+		padding-top: 120px;
+		padding-bottom: 7px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.block-work-top--position {
+		&::before {
+			top: 25px;
+			right: 0;
+			left: auto;
+		}
 	}
 }

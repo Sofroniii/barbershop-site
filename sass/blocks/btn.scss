@@ -1,0 +1,19 @@
+.btn {
+	display: block;
+	margin: 0;
+	padding: 12px 25px;
+
+	font-family: "PTSansNarrowBold", Arial, sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000;
+	border: 1px solid #E5DDD5;
+	background-color: inherit;
+	outline: none; // Глянуть как в bootstrap
+	cursor: pointer;
+}

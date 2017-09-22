@@ -259,12 +259,9 @@
 	.main-nav__list {
 		// float: left;
 		// width: 570px;
-		
 		display: flex;
 		flex-wrap: wrap;
-		
 		flex-grow: 1;
-		justify-content: space-between;
 	}
 
 	.main-nav__user-list {
@@ -305,7 +302,7 @@
 		background: none;
 		border: none;
 	}
-
+  
 	.main-nav__item a[href] {
 		&:hover {
 			color: #826550;
@@ -332,6 +329,7 @@
 		}
 
 		&:hover::before {
+			background-image: url("../img/icon-login-desktop-hover.png");
 			background-position: 0 0;
 			opacity: 1;
 		}
@@ -341,7 +339,6 @@
 			opacity: 0.3;
 		}
 	}
-
 }
 
 @media ($desktop-widths) {
@@ -375,7 +372,7 @@
 
 			background-color: #fff;
 			opacity: 1;
-		}
+		} 
 	}
 
 	.main-nav__user-list {
@@ -416,6 +413,7 @@
 			background-position: 0 0;
 			opacity: 0.1;
 		}
+
 	}
 
 	.main-nav__user-login::before {

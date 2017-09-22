@@ -1,20 +1,27 @@
 .reviews {
-	background-color: #f8f5f2;
+	background-color: $bg-lightgrey;
 	color: #000;
+
+	border-top: 1px solid #E5DDD5;
 }
 
 .reviews__wrapper {
-	@include container();
+	@include container-fluid();
 
-	min-height: 250px; 
 	padding-top: 25px;
-	padding-bottom: 50px;
+	padding-bottom: 15px;
 }
 
 .reviews__title {
-	min-height: 30px;
 	margin: 0;
 	margin-bottom: 28px;
+
+	font-family: "PTSansNarrowBold", Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 30px;
 }
 
 .reviews__write {
@@ -23,17 +30,14 @@
 
 .reviews__link {
 	margin: 0;
+	margin-bottom: 25px;
 	padding: 0;
-
-	// margin-bottom: 25px;
 }
 
 .reviews__item {
-	display: block;
-	min-height: 140px;
+	position: relative;
 	margin: 0 20px;
-	margin-bottom: 20px	;
-
+	margin-bottom: 25px	;
 	padding-left: 70px;
 }
 
@@ -41,12 +45,21 @@
 	display: none;
 }
 
+.reviews__auhor-foto {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 50px;
+	height: 50px;
+}
 .reviews__auhor-name {
-	font-family: "PTSansNarrowBold", sans-serif;
+	display: block;
+	margin-bottom: 10px;
+	font-family: "PTSansNarrowBold", Arial, sans-serif;
 	font-size: 24px;
-	line-height: 27px;
-	font-style: normal;
 	font-weight: 700;
+	font-style: normal;
+	line-height: 27px;
 }
 
 .reviews__item p {
@@ -54,33 +67,123 @@
 	padding: 0;
 }
 
+.reviews__prev,
+.reviews__next {
+	display: none;
+}
+
+#reviews-input-1:checked~ .reviews__toggles label[for="reviews-input-1"],
+#reviews-input-2:checked~ .reviews__toggles label[for="reviews-input-2"],
+#reviews-input-3:checked~ .reviews__toggles label[for="reviews-input-3"] {
+	background-color: #353535;
+}
+
+#reviews-input-1:checked~ .reviews__link .slider__item:nth-child(1) {
+	display: block;
+}
+
+#reviews-input-2:checked~ .reviews__link .slider__item:nth-child(2) {
+	display: block;
+}
+
+#reviews-input-3:checked~ .reviews__link .slider__item:nth-child(3) {
+	display: block;
+}
+
+
 @media ($tablet-widths) {
 	.reviews {
-		padding-top: 35px;
-		padding-bottom: 50px;
+		padding-top: 40px;
+		padding-bottom: 65px;
 	}
 
 	.reviews__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		padding: 0;
-		min-height: 170px;
-	}
-
-	.reviews__item {
-		margin: 0;
-		padding-left: 135px;
 	}
 
 	.reviews__title {
-		display: inline-block;
-		min-height: 40px;
-		margin-right: 200px;	
+		text-align: left;
+		font-size: 40px;
 		margin-bottom: 40px;
 	}
 
 	.reviews__write {
-		display: inline-block;
-		vertical-align: top;
-		width: 160px;
+		display: block;
+		align-self: flex-start;
+		margin-top: -10px;
+	}
+
+	.reviews__link {
+		display: flex;
+		margin-bottom: 0;
+	}
+
+	.reviews__item {
+		order: 1;
+		margin: 0;
+		padding: 30px 30px 30px 135px;
+		border-top: 1px solid #e5ddd5;
+		border-bottom: 1px solid #e5ddd5;
+	}
+
+	.reviews__auhor-foto {
+		top: 38px;
+		left: 30px;
+		width: 80px;
+		height: 80px;
+	}
+
+	.reviews__auhor-name {
+		margin-bottom: 12px;
+	}
+
+	.reviews__prev,
+	.reviews__next {
+		display: block;
+		min-width: 48px;
+		padding: 0;
+		font-size: 0;
+		border: 1px solid #e5ddd5;
+		background-color: $bg-lightgrey;
+		outline: none;
+
+		&::after {
+			content: "";
+			width: 0;
+			height: 0;
+			border: 12px solid transparent;
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+		}
+	}
+
+	.reviews__prev {
+		order: 0;
+
+		&::after {
+			margin-left: -12px;
+			border-right: 12px solid #000;
+		}
+	}
+
+	.reviews__next {
+		order: 3;
+
+		&::after {
+			margin-left: 12px;
+			border-left: 12px solid #000;
+		}
+	}
+
+	.reviews__toggles {
+		margin: auto;
+		margin-top: -5px;
+		background-color: #F8F5F2;
+		z-index: 2;
+		padding: 0 25px;
 	}
 }
 
@@ -90,11 +193,29 @@
 		padding-bottom: 40px;
 	}
 
-	.reviews__link {
-		margin-bottom: 40px;
-	}
 	.reviews__title {
 		margin-left: 70px;
 		margin-bottom: 40px;
+	}
+
+	.reviews__link {
+		margin-bottom: 40px;
+	}
+
+	.reviews__item {
+		margin-right: 20px;
+		margin-left: 20px;
+		padding-left: 320px;
+		padding-right: 50px;
+
+		border: 1px solid #e5ddd5;
+	}
+
+	.reviews__auhor-foto {
+		position: absolute;
+		top: 0px;
+		left: 0;
+		width: 250px;
+		height: 160px;
 	}
 }

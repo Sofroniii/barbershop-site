@@ -66,7 +66,6 @@
 
 .price__discount {
 	position: relative;
-	height: 90px; // временно
 	margin: 0;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -84,7 +83,8 @@
 		width: 57px;
 		height: 57px;
 		transform: translateY(-50%);
-		border: 1px solid white;
+		background-image: url(../img/clock-illustration.svg);
+    background-repeat: no-repeat;
 		border-radius: 50%;
 	}
 }
@@ -194,14 +194,16 @@
 	}
 
 	.price__discount {
+		width: 150px;
 		height: auto;
 		margin: 0;
 		padding: 10px 50px;
 		padding-top: 190px;
 		font-size: 20px;
+		font-weight: normal;	
 		line-height: 27px;
 		text-transform: none;
-		font-weight: normal;	
+		text-align: center;
 
 		&::before {
 			top: 25px;

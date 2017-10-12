@@ -116,6 +116,18 @@
 		margin-top: -10px;
 	}
 
+	.reviews__write--color {
+
+		&:hover {
+			border: 1px solid #D5C9BD;
+		}
+
+		&:active {
+			color: rgba(0, 0, 0, 0.3);
+			background-color: #D5C9BD;
+		}
+	}
+
 	.reviews__link {
 		display: flex;
 		margin-bottom: 0;
@@ -150,6 +162,15 @@
 		background-color: $bg-lightgrey;
 		outline: none;
 
+		&:hover {
+			border: 1px solid #D5C9BD;
+		}
+
+		&:active {
+			color: rgba(0, 0, 0, 0.3);
+			background-color: #D5C9BD;
+		}
+
 		&::after {
 			content: "";
 			width: 0;
@@ -167,6 +188,10 @@
 			margin-left: -12px;
 			border-right: 12px solid #000;
 		}
+
+		&:active::after {
+			border-right: 12px solid rgba(0, 0, 0, 0.3);
+		}
 	}
 
 	.reviews__next {
@@ -175,6 +200,10 @@
 		&::after {
 			margin-left: 12px;
 			border-left: 12px solid #000;
+		}
+
+		&:active::after {
+			border-left: 12px solid rgba(0, 0, 0, 0.3);
 		}
 	}
 

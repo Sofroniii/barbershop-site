@@ -96,7 +96,6 @@
 }
 
 .main-nav__list {
-	// min-height: 255px;
 	font-weight: 700;
 }
 
@@ -149,15 +148,14 @@
 	&::before {
 		content: "";
 		position: absolute;
-		top: 17px;
-		left: 21px;
+		top: 19px;
+		left: 20px;
 
 		width: 16px;
 		height: 16px;
 		
-		background-image: url("../img/icon-login.png");
-		background-position: 0 0;
-		opacity: 0.3;
+		background-image: url("../img/icon-social-sprite.png");
+		background-position: -10px -204px;
 	} 
 }
 
@@ -329,14 +327,17 @@
 		}
 
 		&:hover::before {
-			background-image: url("../img/icon-login-desktop-hover.png");
-			background-position: 0 0;
-			opacity: 1;
+			content: "";
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			
+			background-image: url("../img/icon-social-sprite.png");
+			background-position: -10px -276px;
 		}
 
 		&:active::before {
-			background-position: 0 0;
-			opacity: 0.3;
+			background-position: -10px -204px;
 		}
 	}
 }

@@ -12,6 +12,15 @@
 	outline: none; // Глянуть как в bootstrap
 	cursor: pointer;
 
+	&:hover {
+		border: 1px solid #515151;
+	}
+
+	&:active {
+		background-color: #252525;
+		border: 1px solid #252525;
+	}
+
 	&:last-child {
 		border-right: 1px solid #3E3E3E;
 	}
@@ -22,6 +31,10 @@
 		background-image: url("../img/icon-social-sprite.png");
 		background-repeat: no-repeat;
 		z-index: 5;
+	}
+
+	&:active::after {
+		opacity: 0.3;
 	}
 }
 

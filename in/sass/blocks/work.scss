@@ -4,8 +4,8 @@
 }
 
 .work__wrapper {
-	@include container-fluid();
-
+	@include container-fluid(); 
+	
 	padding-top: 30px;
 	padding-bottom: 15px;
 }
@@ -280,6 +280,7 @@
 	}
 
 	.block-work-top .work__portfolio-wrapper {
+		width: 100%; //
 		padding-top: 120px;
 		padding-bottom: 7px;
 		padding-left: 40px;

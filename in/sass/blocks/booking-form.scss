@@ -5,7 +5,8 @@
 
 @media ($tablet-widths) {
 	.booking-form {
-		clear: both;
+		// clear: both;
+		width: 100%;
 		padding: 0; // временно
 	}
 }

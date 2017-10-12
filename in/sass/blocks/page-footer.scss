@@ -54,6 +54,16 @@
 	background-color: inherit;
 	outline: none; // Глянуть как в bootstrap
 	cursor: pointer;
+
+	&:hover {
+		border: 1px solid #515151;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background-color: #252525;
+		border: 1px solid #252525;
+	}
 }
 
 .page-footer__social {
@@ -74,6 +84,16 @@
 	margin-top: 10px;
 	color: #fff;
 	border: 1px solid #3E3E3E;
+
+	&:hover {
+		border: 1px solid #515151;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background-color: #252525;
+		border: 1px solid #252525;
+	}
 }
 
 @media ($tablet-widths) {
@@ -118,6 +138,13 @@
 
 		&:hover {
 			text-decoration: underline;
+			border: none;
+		}
+
+		&:active {
+			color: #fff;
+			background-color: inherit;
+			border: none;
 		}
 	}
 

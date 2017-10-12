@@ -1,5 +1,5 @@
-node_modules/
 out/
+node_modules/
 .DS_Store
 Thumbs.db
 .idea
@@ -7,3 +7,4 @@ Thumbs.db
 *.log
 *.psd
 *.ai
+in/css/normalize.css

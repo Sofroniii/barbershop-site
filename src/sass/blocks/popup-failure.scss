@@ -1,0 +1,69 @@
+.popup-failure {
+	display: none;
+	position: fixed;
+	z-index: 50;
+	top: 25%;
+	left: 50%;
+	width: 320px;
+	margin: 0;
+	margin-left: -160px;
+	padding: 51px 40px 47px 40px;
+
+	color: #000;
+	background-color: #fff;
+
+	box-shadow: 0px 30px 50px 0px rgba(0, 1, 1, 0.75);
+	box-sizing: border-box;
+}
+
+.popup-failure--show {
+	display: block;
+	animation: bounce 0.5s;
+}
+
+.popup-failure__title {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 7px;
+
+	font-family: "PTSansNarrowBold", Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 48px;
+}
+
+.popup-failure p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.popup-failure__ok {
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 180px;
+
+	color: #fff;
+	background-color: #826550;
+	border: 1px solid #826550;
+
+	&:hover {
+		background-color: #6A4D38;
+		border: 1px solid #6A4D38;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background-color: #6A4D38;
+	}
+}
+
+@media ($tablet-widths) {
+	.popup-failure__ok {
+		width: 150px;
+	}
+}

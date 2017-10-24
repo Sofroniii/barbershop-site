@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "PTSansNarrowRegular";
+	src: 	url("../fonts/PTSansNarrowRegular/PTSansNarrowRegular.woff2") format("woff2"), 
+				url("../fonts/PTSansNarrowRegular/PTSansNarrowRegular.woff") format("woff"); // IE 9+
+				// url("../fonts/PTSansNarrowRegular/PTSansNarrowRegular.ttf") format("truetype"); // устарел, сильно тяжелый
+	font-weight: 400;		
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PTSansNarrowBold";
+	src: 	url("../fonts/PTSansNarrowBold/PTSansNarrowBold.woff2") format("woff2"), 
+				url("../fonts/PTSansNarrowBold/PTSansNarrowBold.woff") format("woff");
+				// url("../fonts/PTSansNarrowBold/PTSansNarrowBold.ttf") format("truetype");
+	font-weight: 700;	
+	font-style: normal;
+}

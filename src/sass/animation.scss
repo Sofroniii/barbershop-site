@@ -1,0 +1,18 @@
+/*Дрожит по горизонтали X Feedback*/
+@keyframes shake {
+	0%, 100%								{ transform: translateX(0); 	}
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px);	}
+	20%, 40%, 60%, 80%			{ transform: translateX(10px);	}
+} 
+/*Выезжает по вертикали Y Feedback*/
+@keyframes bounce {
+	0% 		{ transform: translateY(-2000px); }
+	70% 	{ transform: translateY(30px); }
+	90% 	{ transform: translateY(-10px); }
+	100% 	{ transform: translateY(0); }
+} 
+/*Анимация на перелистование слайдера*/
+@keyframes fade {
+	0% 		{ opacity: 0.4; }
+	100% 	{ opacity: 1; }
+}

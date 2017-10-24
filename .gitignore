@@ -1,9 +1,10 @@
 node_modules/
-out/
 .DS_Store
 Thumbs.db
+out
 .idea
 *.sublime*
 *.log
 *.psd
 *.ai
+in/css/normalize.css
